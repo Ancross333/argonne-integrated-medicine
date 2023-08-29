@@ -1,0 +1,92 @@
+*{
+    box-sizing: border-box;
+}
+
+#bannerContainer{
+    margin-top: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #4B8E92;
+    color: white;
+    font-size: 1.25rem;
+}
+
+#footerContainer{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#footerIcons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    transform: translateY(-20px); /* Button move up */
+}
+
+.footerSideContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.footerItemContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footerIconButton{
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Button move transition */
+}
+
+.footerIconButton:hover{
+    opacity: 70%;
+    transform: translateX(10px) translateY(-10px); /* Button move over */
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3); /* Button shadow on hover */
+}
+
+.scheduleButton {
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: rgb(182, 227, 212);
+    color: black;
+    font-size: 1rem;
+    border: 2px solid black; /* Add a small black border */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Button move transition */
+  }
+  
+
+.scheduleButton:hover {
+    opacity: 70%;
+    transform: translateY(-10px); /* Button move up on hover */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Button shadow on hover */
+}
+
+/* Styles for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    #bannerContainer {
+        flex-direction: column;
+        gap: 20px; /* Gap between footer sections on small screens */
+    }
+}
+
+/* Styles for screens larger than or equal to 768px */
+@media screen and (min-width: 768px) {
+    .footerSideContainer {
+        width: 50%;
+    }
+    #footerIcons {
+        transform: translateY(0); /* Reset button move up on larger screens */
+    }
+}

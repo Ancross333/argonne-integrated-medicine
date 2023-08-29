@@ -1,0 +1,61 @@
+.contact-form-container {
+    width: 40%;
+}
+
+.company-name,
+.address,
+.phone-number {
+    text-align: left;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.contact-form label,
+.contact-form input,
+.contact-form textarea,
+.contact-form .submit-button {
+    margin: 10px 0;
+}
+
+.contact-form input[type='tel'],
+.contact-form input[type='text'] {
+    margin-right: 10px;
+}
+
+.contact-form textarea {
+    height: 100px;
+}
+
+.contact-form .submit-button {
+    align-self: flex-start;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .contact-form-container {
+        width: 100%;
+    }
+    
+    .input-row {
+        flex-direction: column;
+    }
+    
+    .contact-form input[type='tel'],
+    .contact-form input[type='text'] {
+        margin-right: 0;
+    }
+}
