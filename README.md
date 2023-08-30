@@ -1,15 +1,15 @@
-# Getting Started with Create React App
+# Setting up a local copy of the website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Install NodeJs
+In order to get a copy of the website on your local machine, you need to download and install [NodeJs](https://nodejs.org/en). The latest LTS version should work, but in case it doesn't, this project runs on [version 16.17.1](https://nodejs.org/dist/v16.17.1/), so try that instead.
 
-## Available Scripts
+## Navigate to the project directory
 
-In the project directory, you can run:
+Hit the windows key, type `cmd` into the search bar, then open the Command Prompt.
 
-### `npm start`
+After that, type in `cd your file path here`. The file path could be C:/Users/source/repos/argonne-integrated-medicine 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Type `npm start` and a local copy of the website should automatically open in your default web browser If it does not, open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
