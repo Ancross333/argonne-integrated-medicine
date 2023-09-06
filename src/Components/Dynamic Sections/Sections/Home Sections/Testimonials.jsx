@@ -58,13 +58,21 @@ export default function Testimonials() {
 
   return (
     <div className="testimonials-container">
-      <button onClick={prevTestimonial}>&lt;</button>
-      <div className="testimonials-viewport">
-        {window.innerWidth > 768 ? getTestimonial(currentIndex) : null}
-        {getTestimonial((currentIndex + 1) % testimonials.length)}
-        {window.innerWidth > 768 ? getTestimonial((currentIndex + 2) % testimonials.length) : null}
-      </div>
-      <button onClick={nextTestimonial}>&gt;</button>
+        <button className="arrow-button" onClick={prevTestimonial}>
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15 18L9 12L15 6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+        </button>
+        <div className="testimonials-viewport">
+            {window.innerWidth > 768 ? getTestimonial(currentIndex) : null}
+            {getTestimonial((currentIndex + 1) % testimonials.length)}
+            {window.innerWidth > 768 ? getTestimonial((currentIndex + 2) % testimonials.length) : null}
+        </div>
+        <button className="arrow-button" onClick={nextTestimonial}>
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 18L15 12L9 6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+        </button>
     </div>
   );
 }
