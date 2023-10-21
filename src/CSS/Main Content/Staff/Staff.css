@@ -24,6 +24,8 @@
 .bio {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+  text-align: left;
+  line-height: 1.5rem;
 }
 
 .profileImage {

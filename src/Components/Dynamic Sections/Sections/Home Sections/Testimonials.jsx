@@ -1,39 +1,44 @@
 import React, { useState } from 'react'
+import axios from 'axios';
 import Testimonial from '../../../Dynamic Templates/Testimonial'
 import pfp from '../../../../Assets/pfp.jpg'
 
 export default function Testimonials() {
 
+  // const test = axios.get("https://mybusiness.googleapis.com/v4/accounts/{accountId}/locations/{locationId}/reviews")
+  //   .then(res => {
+  //     console.log(res.data);
+  //   })
   const testimonials = [
     {
       profilePicture: pfp,
-      name: "Testimonial User 1",
-      review: "kj fdgk dfgkjd fgkj dfgkj dfgkj dfgkj dfgkjd fgkj dfgkj dfgkj dfgkjd fgkjd fgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkjd fgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgk dfgjk dgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgjk dgkj dfgkj dfgkj dfgkj dfgkj dgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj gdkd ghdgkhj lfgjh lkjf ghklj dghlkj dfhlkj dfghklj dfhlkj dkghlkj fdghlkj fghlkj dkhjl dghlkj fdklj fdkljdfhlkj dfghlkj dfhlkj fdhlkj fghlkj fghlkj dghlkj dfghlkj dfkhjl df"
+      name: "N Lien",
+      review: "I Love this Doc. He does fantastic work adjusting me. Always leave feeling💯 His reception people are always so pleasant and do their jobs perfect. I've never had a bad visit. Grateful. I highly recommend this office."
     },
     {
       profilePicture: pfp,
-      name: "Testimonial User 2",
-      review: "kj fdgk dfgkjd fgkj dfgkj dfgkj dfgkj dfgkjd fgkj dfgkj dfgkj dfgkjd fgkjd fgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkjd fgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgk dfgjk dgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgjk dgkj dfgkj dfgkj dfgkj dfgkj dgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj gdkd ghdgkhj lfgjh lkjf ghklj dghlkj dfhlkj dfghklj dfhlkj dkghlkj fdghlkj fghlkj dkhjl dghlkj fdklj fdkljdfhlkj dfghlkj dfhlkj fdhlkj fghlkj fghlkj dghlkj dfghlkj dfkhjl df"
+      name: "Logan Hughes",
+      review: "This is my new regular monthly stop. I can't believe how amazing my experience was, genuinely. Between the kind front desk members, to the personable and professional Docs, this office is a must. Doctor J. Goldfeldt took the time to listen to my habits, then took extra time to tend to my concerns. Doc then took a moment to explain what he was doing and how'd I'd feel going and coming out of it. I just can't believe I've never had this done before because now I can't imagine never not doing this regularly. It was extremely affordable, to the point where I'd happily pay twice as much for that level of care. If you're seeing this; I thank you, to the moon and back, for my experience. A patient for life."
     },
     {
       profilePicture: pfp,
-      name: "Testimonial User 3",
-      review: "kj fdgk dfgkjd fgkj dfgkj dfgkj dfgkj dfgkjd fgkj dfgkj dfgkj dfgkjd fgkjd fgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkjd fgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgk dfgjk dgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgjk dgkj dfgkj dfgkj dfgkj dfgkj dgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj gdkd ghdgkhj lfgjh lkjf ghklj dghlkj dfhlkj dfghklj dfhlkj dkghlkj fdghlkj fghlkj dkhjl dghlkj fdklj fdkljdfhlkj dfghlkj dfhlkj fdhlkj fghlkj fghlkj dghlkj dfghlkj dfkhjl df"
+      name: "Jayne Edens",
+      review: "Their is to help you feel your best!  They listen to your concerns, pains and discomforts and show you exercises that can help improve quality of life. They are friendly and caring from the front desk to the massage table! And of course Dr. John's Chiropractic table!  I appreciate the care I received at Argonne Family!"
     },
     {
       profilePicture: pfp,
-      name: "Testimonial User 4",
-      review: "kj fdgk dfgkjd fgkj dfgkj dfgkj dfgkj dfgkjd fgkj dfgkj dfgkj dfgkjd fgkjd fgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkjd fgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgk dfgjk dgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgjk dgkj dfgkj dfgkj dfgkj dfgkj dgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj gdkd ghdgkhj lfgjh lkjf ghklj dghlkj dfhlkj dfghklj dfhlkj dkghlkj fdghlkj fghlkj dkhjl dghlkj fdklj fdkljdfhlkj dfghlkj dfhlkj fdhlkj fghlkj fghlkj dghlkj dfghlkj dfkhjl df"
+      name: "Daryl Williams",
+      review: "Always feel welcome and appreciated. Dr John always listens to and addresses my issues with genuine care and concern. He goes the extra mile plus. Would not want to go anywhere else."
     },
     {
       profilePicture: pfp,
-      name: "Testimonial User 5",
-      review: "kj fdgk dfgkjd fgkj dfgkj dfgkj dfgkj dfgkjd fgkj dfgkj dfgkj dfgkjd fgkjd fgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkjd fgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgk dfgjk dgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgjk dgkj dfgkj dfgkj dfgkj dfgkj dgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj gdkd ghdgkhj lfgjh lkjf ghklj dghlkj dfhlkj dfghklj dfhlkj dkghlkj fdghlkj fghlkj dkhjl dghlkj fdklj fdkljdfhlkj dfghlkj dfhlkj fdhlkj fghlkj fghlkj dghlkj dfghlkj dfkhjl df"
+      name: "Nancy Springer-Smith",
+      review: "I have known Dr. John for many years. He's not just my Chiropractor but, he is also my friend. I woudn't let anyone else give me my adjustment's! Love you Dr. John your the best!"
     },
     {
       profilePicture: pfp,
-      name: "Testimonial User 6",
-      review: "kj fdgk dfgkjd fgkj dfgkj dfgkj dfgkj dfgkjd fgkj dfgkj dfgkj dfgkjd fgkjd fgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkjd fgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgk dfgjk dgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgjk dgkj dfgkj dfgkj dfgkj dfgkj dgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj dfgkj gdkd ghdgkhj lfgjh lkjf ghklj dghlkj dfhlkj dfghklj dfhlkj dkghlkj fdghlkj fghlkj dkhjl dghlkj fdklj fdkljdfhlkj dfghlkj dfhlkj fdhlkj fghlkj fghlkj dghlkj dfghlkj dfkhjl df"
+      name: "Debbie Stanfield",
+      review: "Dr. John and his staff are not only professional, caring and consistent, he has taken me from a wheelchair, chronic pain all over my muskular skeletal system, to walking and healthy. Digestively, neck, bulging dics, SI Joint, hand pain, foot pain to minimal pain. My circulatory system is healthy and symptoms of ulcers, upset stomach are gone. I have been a patient of his for 21 years."
     },
   ]; 
 
