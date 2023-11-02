@@ -1,4 +1,4 @@
-#Todo:
+# Todo:
 
 - Add responsive UI Design
 - Clean up temp images with SVGs
