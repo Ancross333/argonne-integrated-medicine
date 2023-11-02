@@ -1,75 +1,64 @@
-/* Styles for StaffCard */
-
 .card {
-  background: white;
-  width: 300px;
-  height: 410px; /* Set a fixed height to your card */
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: 10px auto;
   padding: 20px;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-  margin: 10px;
+  opacity: 0; /* Initial state invisible */
+  animation: fadeIn 1s forwards 0.5s; /* Animation name, duration, fill mode, delay */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1; /* Ending state visible */
+  }
+}
+
+.profileImageContainer {
+  transform: translateX(-100%); /* Start from left outside of view */
+  animation: slideInFromLeft 1s forwards 0.5s; /* Animation name, duration, fill mode, delay */
+}
+
+@keyframes slideInFromLeft {
+  to {
+    transform: translateX(0); /* Slide to its original position */
+  }
+}
+
+.textContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  overflow: hidden; /* This will hide overflowing content */
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-.bio::-webkit-scrollbar {
-  width: 0;  /* Remove scrollbar space */
-  background: transparent;  /* Optional: make scrollbar invisible */
-}
-
-/* Hide scrollbar for IE, Edge, and Firefox */
-.bio {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  gap: 25px;
   text-align: left;
-  line-height: 1.5rem;
+  transform: translateX(100%); /* Start from right outside of view */
+  animation: slideInFromRight 1s forwards 0.5s; /* Animation name, duration, fill mode, delay */
 }
 
-.profileImage {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
+@keyframes slideInFromRight {
+  to {
+    transform: translateX(0); 
+  }
 }
 
 .name {
-  margin: 10px 0;
   font-size: 20px;
-  font-weight: 600;
-  max-height: 44px; /* Two lines of text */
-  overflow: hidden; /* This will hide overflowing text for names */
+  font-weight: bold;
 }
 
 .bio {
   font-size: 16px;
-  color: #333;
-  flex: 1; /* Let the bio occupy remaining space */
-  overflow: auto; /* Show scrollbar for overflowing content */
 }
-  
-  /* Styles for StaffGrid */
-  
-  .staffGrid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
-  
-  .staffGrid .card {
-    flex: 1 0 300px;
-    min-width: 0;
-    margin: 10px;
-    box-sizing: border-box;
-  }
-  
-  @media (max-width: 960px) {
-    .staffGrid .card {
-      flex: 1 0 100%;
-    }
-  }
-  
+
+.staffGrid {
+  display: flex;
+  flex-direction: column;
+}
+
+.profileImage {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center; 
+  margin-right: 20px;
+}
