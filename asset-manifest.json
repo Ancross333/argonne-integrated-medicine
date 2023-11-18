@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/argonne-integrated-medicine/static/css/main.22d146af.css",
+    "main.js": "/argonne-integrated-medicine/static/js/main.41fff9af.js",
+    "static/media/Stephnie.jpg": "/argonne-integrated-medicine/static/media/Stephnie.893aad39d9ba203c519a.jpg",
+    "static/media/Mariah.jpg": "/argonne-integrated-medicine/static/media/Mariah.4adf8a378b9b414129d3.jpg",
+    "static/media/Kim.jpg": "/argonne-integrated-medicine/static/media/Kim.cf7b1b52962f508605c8.jpg",
+    "static/media/owners.jpg": "/argonne-integrated-medicine/static/media/owners.3380643924ef7fb67569.jpg",
+    "static/media/Whitman.jpg": "/argonne-integrated-medicine/static/media/Whitman.98e4a092dfa7ec22d0c4.jpg",
+    "static/media/Anthone.jpg": "/argonne-integrated-medicine/static/media/Anthone.a7b859b55aa60128f51e.jpg",
+    "static/media/Goldfelt.jpg": "/argonne-integrated-medicine/static/media/Goldfelt.b37fdd4d7647d827b9ae.jpg",
+    "index.html": "/argonne-integrated-medicine/index.html",
+    "main.22d146af.css.map": "/argonne-integrated-medicine/static/css/main.22d146af.css.map",
+    "main.41fff9af.js.map": "/argonne-integrated-medicine/static/js/main.41fff9af.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.22d146af.css",
+    "static/js/main.41fff9af.js"
+  ]
+}
